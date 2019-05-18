@@ -41,7 +41,7 @@
 				<div class="wrap_header trans-0-3">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="index.html">
+						<a href="index.php">
 							<img src="images/icons/logo.png" alt="IMG-LOGO" data-logofixed="images/icons/logo.png">
 						</a>
 					</div>
@@ -53,30 +53,30 @@
 								
 
 
-                                <li><a href="reservation.html">Events</a>
+                                <li><a href="reservation.php">Events</a>
                                    
                                 </li>
 
 
 								<li>
-									<a href="about.html">About Us</a>
+									<a href="about.php">About Us</a>
 								</li>
 
 								<li>
-									<a href="blog.html">News</a>
+									<a href="blog.php">News</a>
 								</li>
 
 								<li>
-									<a href="contact.html">Contact Us</a>
+									<a href="contact.php">Contact Us</a>
 								</li>
                                 
                                 <li>
-									<a href="index.html">Links</a>
+									<a href="link.php">Links</a>
 								</li>
 
                                   
                                 <li>
-									<a href="login.html">My PPBU2</a>
+									<a href="login.php">My PPBU2</a>
 								</li>
 
 							</ul>
@@ -107,23 +107,23 @@
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="about.html" class="txt19">About Us</a>
+				<a href="about.php" class="txt19">About Us</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="blog.html" class="txt19">News</a>
+				<a href="blog.php" class="txt19">News</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="contact.html" class="txt19">Contact Us</a>
+				<a href="contact.php" class="txt19">Contact Us</a>
 			</li>
             
            	<li class="t-center m-b-13">
-				<a href="link.html" class="txt19">Links</a>
+				<a href="link.php" class="txt19">Links</a>
 			</li>
 
 			<li class="t-center m-b-33">
-				<a href="contact.html" class="txt19">My PPBU2</a>
+				<a href="login.php" class="txt19">My PPBU2</a>
 			</li>
             
 		</ul>
