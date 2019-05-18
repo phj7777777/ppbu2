@@ -9,12 +9,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PPBU2 - Admin Panel</title>
-    <meta name="description" content="PPBU2 - Admin Panel">
+
+  <title>PPBU2 admin panel</title>
+    <meta name="description" content="PPBU2 admin panel">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="../images/icons/favicon.png">
+
 
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
@@ -42,14 +44,17 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
+
+                 <a class="navbar-brand" href="index.php"><img src="images/logo.png" width="100" height="100" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="index.php"><img src="images/logo2.png"  alt="Logo"></a>
+
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                    
                     <h3 class="menu-title">Create</h3><!-- /.menu-title -->
+
                         <li>
                             <a href="create_new_member.php"> <i class="menu-icon ti-github"></i>New Member </a>
                         </li>
@@ -62,8 +67,6 @@
                         <li>
                             <a href="widgets.html"> <i class="menu-icon ti-pencil-alt"></i>New News/Event </a>
                         </li>
-
-                    <h3 class="menu-title">View</h3><!-- /.menu-title -->
 
                              <li>
                                 <a href="widgets.html"> <i class="menu-icon ti-github"></i>Member Details </a>
@@ -78,19 +81,21 @@
                                 <a href="widgets.html"> <i class="menu-icon ti-pencil-alt"></i>Visitor Details </a>
                             </li>
 
+                    
                     <h3 class="menu-title">Extras Resource</h3><!-- /.menu-title -->
                         <li>
-                            <a href="widgets.html"> <i class="menu-icon ti-github"></i>Applications </a>
-                        </li>
+                            <a href="widgets.html"> <i class="menu-icon ti-face-smile"></i>Articles</a>
+                        </li> 
+
                         <li>
-                            <a href="widgets.html"> <i class="menu-icon ti-face-smile"></i>Report</a>
+                            <a href="widgets.html"> <i class="menu-icon ti-wallet"></i>Presentation</a>
                         </li>
-                        <li>
-                            <a href="widgets.html"> <i class="menu-icon ti-wallet"></i>Article</a>
+
+                         <li>
+                            <a href="widgets.html"> <i class="menu-icon ti-car"></i>Report</a>
                         </li>
-                    
-                    
-                   
+               
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -110,7 +115,10 @@
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
-                        <h3>Welcome back to admin Panel</h3>
+
+                        <h3>Welcome Back to Admin Panel</h3>
+                       
+
                     </div>
                 </div>
 
@@ -126,7 +134,6 @@
                         </div>
                     </div>
 
-                  
 
                 </div>
             </div>
@@ -357,6 +364,8 @@
             </div>
             <!--/.col-->
 
+
+          
 
 
         </div> <!-- .content -->
