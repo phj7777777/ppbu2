@@ -3,15 +3,18 @@ session_start();
 require "php/db.php";
 
 
+
 /*
 admin login process
 check if user is exists and password verification in the database
 */
 
 
+
 //escape username to rpotext against SQL injections
 $email = mysqli_real_escape_string($con, $_POST['email']);
 $password = mysqli_real_escape_string($con, $_POST['password']);
+
 
 
 
@@ -30,5 +33,6 @@ if($queryResult > 0){
 
     
        
+
 
 ?>

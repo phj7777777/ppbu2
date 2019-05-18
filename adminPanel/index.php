@@ -9,12 +9,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PPBU2 admin panel</title>
+
+  <title>PPBU2 admin panel</title>
     <meta name="description" content="PPBU2 admin panel">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="../images/icons/favicon.png">
+
 
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
@@ -42,14 +44,17 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.php"><img src="images/logo.png" width="100" height="100" alt="Logo"></a>
+
+                 <a class="navbar-brand" href="index.php"><img src="images/logo.png" width="100" height="100" alt="Logo"></a>
                 <a class="navbar-brand hidden" href="index.php"><img src="images/logo2.png"  alt="Logo"></a>
+
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                    
                     <h3 class="menu-title">Create</h3><!-- /.menu-title -->
+
                      <li>
                         <a href="widgets.html"> <i class="menu-icon ti-github"></i>New Resident</a>
                     </li> 
@@ -98,6 +103,7 @@
                          <li>
                             <a href="widgets.html"> <i class="menu-icon ti-car"></i>Report</a>
                         </li>
+               
 
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -118,8 +124,10 @@
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
+
                         <h3>Welcome Back to Admin Panel</h3>
                        
+
                     </div>
                 </div>
 
@@ -134,6 +142,7 @@
                             <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
                     </div>
+
 
                 </div>
             </div>
@@ -364,7 +373,8 @@
             </div>
             <!--/.col-->
 
-            
+
+          
 
 
         </div> <!-- .content -->
