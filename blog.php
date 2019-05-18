@@ -43,7 +43,7 @@
 				<div class="wrap_header trans-0-3">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="index.html">
+						<a href="index.php">
 							<img src="images/icons/logo.png" alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
 						</a>
 					</div>
@@ -53,27 +53,27 @@
 						<nav class="menu">
 							<ul class="main_menu">
 								<li>
-									<a href="index.html">Home</a>
+									<a href="index.php">Home</a>
 								</li>
 
 								<li>
-									<a href="reservation.html">Events</a>
+									<a href="gallery.html">Events</a>
 								</li>
 
 								<li>
-									<a href="about.html">About Us</a>
+									<a href="about.php">About Us</a>
 								</li>
 
 								<li>
-									<a href="contact.html">Contact Us</a>
+									<a href="contact.php">Contact Us</a>
 								</li>
 
 								<li>
-									<a href="link.html">Links</a>
+									<a href="link.php">Links</a>
 								</li>
 
 								<li>
-									<a href="myppbu2.html">My PPBU2</a>
+									<a href="login.php">My PPBU2</a>
 								</li>
 							</ul>
 						</nav>
@@ -100,27 +100,27 @@
 		<!-- - -->
 		<ul class="menu-sidebar p-t-95 p-b-70">
 			<li class="t-center m-b-13">
-				<a href="index.html" class="txt19">Home</a>
+				<a href="index.php" class="txt19">Home</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="reservation.html" class="txt19">Events</a>
+				<a href="gallery.html" class="txt19">Events</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="about.html" class="txt19">About Us</a>
+				<a href="about.php" class="txt19">About Us</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="contact.html" class="txt19">Contact Us</a>
+				<a href="contact.php" class="txt19">Contact Us</a>
 			</li>
 
 			<li class="t-center m-b-13">
-				<a href="link.html" class="txt19">Links</a>
+				<a href="link.php" class="txt19">Links</a>
 			</li>
 
 			<li class="t-center m-b-33">
-				<a href="myppbu2.html" class="txt19">MY PPBU2</a>
+				<a href="login.php" class="txt19">MY PPBU2</a>
 			</li>
 
 		</ul>

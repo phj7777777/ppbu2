@@ -1,3 +1,10 @@
+<?php
+   
+    include("login_back.php");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +37,9 @@
 					<img src="images/icons/logo.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" action="login_back.php" method="post">
+
+				<form class="login100-form validate-form" action = "login_back.php" method="POST">
+
 					<span class="login100-form-title">
 						Panel Login
 					</span>
