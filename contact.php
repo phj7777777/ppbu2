@@ -73,7 +73,7 @@
 								</li>
 
 								<li>
-									<a href="myppbu2.html">My PPBU2</a>
+									<a href="login.html">My PPBU2</a>
 								</li>
 
 							</ul>

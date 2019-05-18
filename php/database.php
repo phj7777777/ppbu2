@@ -20,9 +20,5 @@
         die($conn_error);
         echo "fail to connect into database";
     }
-    else{
-        
-        echo "success";
-    }
- 
+  
 ?>
