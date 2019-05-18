@@ -43,7 +43,7 @@
 				<div class="wrap_header trans-0-3">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="index.html">
+						<a href="index.php">
 							<img src="images/icons/logo.png" alt="IMG-LOGO" data-logofixed="images/icons/logo2.png">
 						</a>
 					</div>
@@ -53,7 +53,7 @@
 						<nav class="menu">
 							<ul class="main_menu">
 								<li>
-									<a href="index.html">Home</a>
+									<a href="index.php">Home</a>
 								</li>
 
 								<li>
@@ -61,19 +61,19 @@
 								</li>
 
 								<li>
-									<a href="blog.html">News</a>
+									<a href="blog.php">News</a>
 								</li>
 
 								<li>
-									<a href="contact.html">Contact Us</a>
+									<a href="contact.php">Contact Us</a>
 								</li>
 
 								<li>
-									<a href="link.html">Links</a>
+									<a href="link.php">Links</a>
 								</li>
 
 								<li>
-									<a href="myppbu2.html">My PPBU2</a>
+									<a href="login.php">My PPBU2</a>
 								</li>
 
 							</ul>
@@ -102,23 +102,23 @@
 		<!-- - -->
 	<ul class="menu-sidebar p-t-55 p-b-70">
 			<li class="t-center m-b-13">
-				<a href="about.html" class="txt19">Home</a>
+				<a href="about.php" class="txt19">Home</a>
 			</li>
 
 			<li class="t-center m-b-20">
-				<a href="committee_about.html" class="txt19">The Committee</a>
+				<a href="committee_about.php" class="txt19">The Committee</a>
 			</li>
 
 			<li class="t-center m-b-20">
-				<a href="representive_about.html" class="txt19">Road Representative</a>
+				<a href="representive_about.php" class="txt19">Road Representative</a>
 			</li>
 
 			<li class="t-center m-b-20">
-				<a href="auditor_about.html" class="txt19">Auditors</a>
+				<a href="auditor_about.php" class="txt19">Auditors</a>
 			</li>
 
 			<li class="t-center m-b-20">
-				<a href="blog.html" class="txt19">Membership</a>
+				<a href="blog.php" class="txt19">Membership</a>
 			</li>
 
 		
