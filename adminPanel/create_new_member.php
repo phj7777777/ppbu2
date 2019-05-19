@@ -159,11 +159,14 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header">
+
                 <strong>New Resident Form</strong> 
+
             </div>
             <div class="card-body card-block">
                 <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                     <div class="row form-group">
+
                         <div class="col col-md-3"><label class=" form-control-label">Name(AS PER NRIC):</label></div>
                         <div class="col-12 col-md-9"><input type="text" id="name-input" name="name-input" placeholder="Enter your name" class="form-control"><small class="help-block text-muted">Please enter your name</small></div>
                     </div>
@@ -218,11 +221,13 @@
                                     <div class="radio">
                                         <label for="radio2" class="form-check-label ">
                                             <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">TENANT-OCCUPIED HOUSE
+
                                         </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     <div class="row form-group">
                         <div class="col col-md-3"><label for="ic-input" class=" form-control-label">Phone No:</label></div>
                         <div class="col-12 col-md-9"><input type="tel" id="phone-input" name="phone-input" placeholder="Example: 010-1234567" class="form-control"><small class="help-block text-muted">Please enter your phone no</small></div>
@@ -231,6 +236,7 @@
                         <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email Address:</label></div>
                         <div class="col-12 col-md-9"><input type="email" id="email-input" name="email-input" placeholder="Example: john@yahoo.com" class="form-control"><small class="help-block text-muted">Please enter your email</small></div>
                     </div>
+
                 </form>
             </div>
             <div class="card-footer">
@@ -242,7 +248,9 @@
                 </button>
             </div>
         </div>
+
         
+
     </div>
 </div><!-- .animated -->
 </div><!-- .content -->
