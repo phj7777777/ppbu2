@@ -164,24 +164,24 @@
 
             </div>
             <div class="card-body card-block">
-                <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <form action="resident_back.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                     <div class="row form-group">
 
                         <div class="col col-md-3"><label class=" form-control-label">Name(AS PER NRIC):</label></div>
-                        <div class="col-12 col-md-9"><input type="text" id="name-input" name="name-input" placeholder="Enter your name" class="form-control"><small class="help-block text-muted">Please enter your name</small></div>
+                        <div class="col-12 col-md-9"><input type="text" id="name-input" name="name" placeholder="Enter your name" class="form-control"><small class="help-block text-muted">Please enter your name</small></div>
                     </div>
                     <div class="row form-group">
                         <div class="col col-md-3"><label for="ic-input" class=" form-control-label">NRIC NO:</label></div>
-                        <div class="col-12 col-md-9"><input type="text" id="ic-input" name="ic-input" placeholder="Example: 690519-01-5970" class="form-control"><small class="help-block text-muted">Please enter your IC No</small></div>
+                        <div class="col-12 col-md-9"><input type="text" id="ic-input" name="icNo" placeholder="Example: 690519-01-5970" class="form-control"><small class="help-block text-muted">Please enter your IC No</small></div>
                     </div>
                     <div class="row form-group">
                         <div class="col col-md-3"><label for="house-input" class=" form-control-label">House No:</label></div>
-                        <div class="col-12 col-md-9"><input type="number" id="house-input" name="house-input" placeholder="Example: 50" class="form-control"><small class="help-block text-muted">Only number available. Etc: 2A = 4,11A =13</small></div>
+                        <div class="col-12 col-md-9"><input type="number" id="house-input" name="houseNo" placeholder="Example: 50" class="form-control"><small class="help-block text-muted">Only number available. Etc: 2A = 4,11A =13</small></div>
                     </div>
                     <div class="row form-group">
                             <div class="col col-md-3"><label for="select" class="form-control-label">Road No:</label></div>
                             <div class="col-12 col-md-9">
-                                <select name="select" id="select" class="form-control">
+                                <select name="road" id="select" class="form-control">
                                     <option value="0">-Please select-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -201,10 +201,10 @@
                             <div class="col col-md-9">
                                 <div class="form-check-inline form-check">
                                     <label for="inline-radio1" class="form-check-label ">
-                                        <input type="radio" id="male" name="inline-radios" value="male" class="form-check-input">Male
+                                        <input type="radio" id="male" name="sex" value="male" class="form-check-input">Male
                                     </label>
                                     <label for="inline-radio2" class="form-check-label ">
-                                        <input type="radio" id="female" name="inline-radios" value="female" class="form-check-input">Female
+                                        <input type="radio" id="female" name="sex" value="female" class="form-check-input">Female
                                     </label>
                                 </div>
                             </div>
@@ -215,12 +215,12 @@
                                 <div class="form-check">
                                     <div class="radio">
                                         <label for="radio1" class="form-check-label ">
-                                            <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">OWNER-OCCUPIED HOUSE
+                                            <input type="radio" id="radio1" name="typeofresidences" value="OWNER-OCCUPIED HOUSE" class="form-check-input">OWNER-OCCUPIED HOUSE
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label for="radio2" class="form-check-label ">
-                                            <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">TENANT-OCCUPIED HOUSE
+                                            <input type="radio" id="radio2" name="typeofresidences" value="TENANT-OCCUPIED HOUSE" class="form-check-input">TENANT-OCCUPIED HOUSE
 
                                         </label>
                                     </div>
@@ -230,16 +230,14 @@
 
                     <div class="row form-group">
                         <div class="col col-md-3"><label for="ic-input" class=" form-control-label">Phone No:</label></div>
-                        <div class="col-12 col-md-9"><input type="tel" id="phone-input" name="phone-input" placeholder="Example: 010-1234567" class="form-control"><small class="help-block text-muted">Please enter your phone no</small></div>
+                        <div class="col-12 col-md-9"><input type="tel" id="phone-input" name="phoneNo" placeholder="Example: 010-1234567" class="form-control"><small class="help-block text-muted">Please enter your phone no</small></div>
                     </div>
                      <div class="row form-group">
                         <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email Address:</label></div>
-                        <div class="col-12 col-md-9"><input type="email" id="email-input" name="email-input" placeholder="Example: john@yahoo.com" class="form-control"><small class="help-block text-muted">Please enter your email</small></div>
+                        <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" placeholder="Example: john@yahoo.com" class="form-control"><small class="help-block text-muted">Please enter your email</small></div>
                     </div>
-
-                </form>
-            </div>
-            <div class="card-footer">
+                    
+                    <div class="card-footer">
                 <button type="submit" class="btn btn-primary btn-sm">
                     <i class="fa fa-dot-circle-o"></i> Submit
                 </button>
@@ -247,6 +245,10 @@
                     <i class="fa fa-ban"></i> Reset
                 </button>
             </div>
+                    
+                </form>
+            </div>
+            
         </div>
 
         
@@ -266,5 +268,6 @@
 
                     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
                     <script src="assets/js/main.js"></script>
+                    
 </body>
 </html>
