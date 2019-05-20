@@ -16,7 +16,7 @@ $transaction_date =  mysqli_real_escape_string($con, $_POST['transaction_date'])
 
 
 
-$sql = "INSERT INTO payment VALUES  ('$houseNo','$road','$car_sticker','$gate_key','$donation','$payment_method','$bank','$cheque_no','$amount','$transaction_date')";
+$sql = "INSERT INTO payment (houseNo,road,car_sticker,gate_key,donation,payment_method,bank,cheque_no,amount,transaction_date) VALUES  ('$houseNo','$road','$car_sticker','$gate_key','$donation','$payment_method','$bank','$cheque_no','$amount','$transaction_date')";
     
 	//successfully added
 	if(mysqli_query($con,$sql)){
