@@ -55,40 +55,33 @@
                    
                     <h3 class="menu-title">Create</h3><!-- /.menu-title -->
 
-                     <li>
-                        <a href="widgets.html"> <i class="menu-icon ti-github"></i>New Resident</a>
-                    </li> 
-                    
-                    <li>
-                        <a href="widgets.html"> <i class="menu-icon ti-face-smile"></i>New Member </a>
-                    </li> 
-                    
-                    <li>
-                        <a href="widgets.html"> <i class="menu-icon ti-wallet"></i>New Payment</a>
-                    </li>
-                    
-                     <li>
-                        <a href="widgets.html"> <i class="menu-icon ti-car"></i>New Visitor</a>
-                    </li>
-
+                        <li>
+                            <a href="create_new_member.php"> <i class="menu-icon ti-github"></i>New Member </a>
+                        </li>
+                        <li>
+                            <a href="widgets.html"> <i class="menu-icon ti-face-smile"></i>New Resident </a>
+                        </li>
+                        <li>
+                            <a href="create_payment.php"> <i class="menu-icon ti-wallet"></i>New Payment </a>
+                        </li>
+                        <li>
+                            <a href="widgets.html"> <i class="menu-icon ti-pencil-alt"></i>New News/Event </a>
+                        </li>
                     
                     <h3 class="menu-title">View</h3><!-- /.menu-title -->
-                    
-                     <li>
-                        <a href="widgets.html"> <i class="menu-icon ti-github"></i>Resident Details</a>
-                    </li> 
-                    
-                    <li>
-                        <a href="widgets.html"> <i class="menu-icon ti-face-smile"></i>Member Details</a>
-                    </li> 
-                    
-                    <li>
-                        <a href="widgets.html"> <i class="menu-icon ti-wallet"></i>Payment Details</a>
-                    </li>
-                    
-                     <li>
-                        <a href="widgets.html"> <i class="menu-icon ti-car"></i>Visitor Details</a>
-                    </li>
+
+                             <li>
+                                <a href="widgets.html"> <i class="menu-icon ti-github"></i>Member Details </a>
+                            </li>
+                            <li>
+                                <a href="widgets.html"> <i class="menu-icon ti-face-smile"></i>Resident Details </a>
+                            </li>
+                            <li>
+                                <a href="widgets.html"> <i class="menu-icon ti-wallet"></i>Payment Details </a>
+                            </li>
+                            <li>
+                                <a href="widgets.html"> <i class="menu-icon ti-pencil-alt"></i>Visitor Details </a>
+                            </li>
 
                     
                     <h3 class="menu-title">Extras Resource</h3><!-- /.menu-title -->
