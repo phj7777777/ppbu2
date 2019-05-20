@@ -67,6 +67,8 @@
                         <li>
                             <a href="widgets.html"> <i class="menu-icon ti-pencil-alt"></i>New News/Event </a>
                         </li>
+                    
+                    <h3 class="menu-title">View</h3><!-- /.menu-title -->
 
                              <li>
                                 <a href="widgets.html"> <i class="menu-icon ti-github"></i>Member Details </a>

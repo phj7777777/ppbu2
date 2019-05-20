@@ -162,19 +162,19 @@
                 <strong>New Payment Form</strong> 
             </div>
             <div class="card-body card-block">
-                <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <form action="payment_back.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                
                     
                       
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">House No</label></div>
-                            <div class="col-12 col-md-9"><input type="number" id="text-input" name="text-input" placeholder="0" class="form-control"><small class="form-text text-muted">Only number available. Etc: 2A = 4, 11A = 13</small></div>
+                            <div class="col-12 col-md-9"><input type="number" id="text-input" name="houseNo" placeholder="0" class="form-control"><small class="form-text text-muted">Only number available. Etc: 2A = 4, 11A = 13</small></div>
                         </div>
                     
                       <div class="row form-group">
                             <div class="col col-md-3"><label for="select" class=" form-control-label"> Road</label></div>
                             <div class="col-12 col-md-9">
-                                <select name="select" id="select" class="form-control">
+                                <select name="road" id="select" class="form-control">
                                     <option value="0">Please Select</option>
                                     <option value="1">BU2/1</option>
                                     <option value="2">BU2/2</option>
@@ -201,7 +201,7 @@
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="select" class=" form-control-label">Additional Car Stickers</label></div>
                             <div class="col-12 col-md-9">
-                                <select name="select" id="select" class="form-control">
+                                <select name="car_sticker" id="select" class="form-control">
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -218,7 +218,7 @@
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="select" class=" form-control-label">Gate Keys</label></div>
                             <div class="col-12 col-md-9">
-                                <select name="select" id="select" class="form-control">
+                                <select name="gate_key" id="select" class="form-control">
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -235,7 +235,7 @@
                     
                         <div class="row form-group">
                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Donation (RM)</label></div>
-                            <div class="col-12 col-md-9"><input type="number" id="text-input" name="text-input" placeholder="0" class="form-control"><small class="form-text text-muted">RM200 or more, Free will Basis</small></div>
+                            <div class="col-12 col-md-9"><input type="number" id="text-input" name="donation" placeholder="0" class="form-control"><small class="form-text text-muted">RM200 or more, Free will Basis</small></div>
                         </div>
                     
                     
@@ -246,17 +246,17 @@
                                 <div class="form-check">
                                     <div class="radio">
                                         <label for="radio1" class="form-check-label ">
-                                            <input type="radio" id="radio1" name="radios" onclick="myFunction()" value="option1" class="form-check-input">Cheque
+                                            <input type="radio" id="radio1" name="payment_method" onclick="myFunction()" value="option1" class="form-check-input">Cheque
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label for="radio2" class="form-check-label ">
-                                            <input type="radio" id="radio2" name="radios" value="option2" onclick="myFunction()" class="form-check-input">Online Banking
+                                            <input type="radio" id="radio2" name="payment_method" value="option2" onclick="myFunction()" class="form-check-input">Online Banking
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label for="radio3" class="form-check-label ">
-                                            <input type="radio" id="radio3" name="radios" onclick="myFunction()" value="option3" class="form-check-input">Mytaman App
+                                            <input type="radio" id="radio3" name="payment_method" onclick="myFunction()" value="option3" class="form-check-input">Mytaman App
                                         </label>
                               </div>
                                 </div>   
@@ -268,7 +268,7 @@
                   <div id="bank" style="display:none" class="row form-group">
                             <div class="col col-md-3"><label for="select" class=" form-control-label">Bank</label></div>
                             <div class="col-12 col-md-9">
-                                <select name="select" id="select" class="form-control">
+                                <select name="bank" id="select" class="form-control">
                                     <option value="0">Affin Bank</option>
                                     <option value="1">Alliance Bank Malaysia</option>
                                     <option value="2">AmBank (M)</option>
@@ -299,29 +299,29 @@
                     
                     <div id="chequeNo" style="display:none" class="row form-group">
                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Cheque No</label></div>
-                            <div class="col-12 col-md-9"><input type="number_format" id="text-input" name="text-input" placeholder="Make sure the cheque no is correct" class="form-control"></div>
+                            <div class="col-12 col-md-9"><input type="number_format" id="text-input" name="cheque_no" placeholder="Make sure the cheque no is correct" class="form-control"></div>
                         </div>
                     
                        <div id="transactionDate" style="display:none" class="row form-group">
                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Transfer Date</label></div>
-                            <div class="col-12 col-md-9"><input type="number_format" id="text-input" name="text-input" placeholder="Example:12/7/18" class="form-control"></div>
+                            <div class="col-12 col-md-9"><input type="number_format" id="text-input" name="transaction_date" placeholder="Example:12/7/18" class="form-control"></div>
                         </div>
                     
                     <div id="amount" style="display:none" class="row form-group">
                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Amount (RM)</label></div>
-                            <div class="col-12 col-md-9"><input type="number_format" id="text-input" name="text-input" placeholder="0" class="form-control"></div>
+                            <div class="col-12 col-md-9"><input type="number_format" id="text-input" name="amount" placeholder="0" class="form-control"></div>
                         </div>
                     
-            
-                       
-                </form>
-            </div>
-            <div class="card-footer">
+              <div class="card-footer">
                 <button type="submit" class="btn btn-primary btn-success float-right btn-sm">
                     <i class="fa fa-dot-circle-o"></i> Submit
                 </button>
 
             </div>
+                       
+                </form>
+            </div>
+          
         </div>
        
     </div>
