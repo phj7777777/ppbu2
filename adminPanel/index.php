@@ -71,13 +71,13 @@
                     <h3 class="menu-title">View</h3><!-- /.menu-title -->
 
                              <li>
-                                <a href="widgets.html"> <i class="menu-icon ti-github"></i>Member Details </a>
+                                <a href="widgets.html"> <i class="menu-icon ti-github"></i>Resident Details </a>
                             </li>
                             <li>
-                                <a href="widgets.html"> <i class="menu-icon ti-face-smile"></i>Resident Details </a>
+                                <a href="database_admin.php"> <i class="menu-icon ti-face-smile"></i>House Details </a>
                             </li>
                             <li>
-                                <a href="widgets.html"> <i class="menu-icon ti-wallet"></i>Payment Details </a>
+                                <a href="payment_admin.php"> <i class="menu-icon ti-wallet"></i>Payment Details </a>
                             </li>
                             <li>
                                 <a href="widgets.html"> <i class="menu-icon ti-pencil-alt"></i>Visitor Details </a>
