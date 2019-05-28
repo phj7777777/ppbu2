@@ -71,7 +71,7 @@
                     <h3 class="menu-title">View</h3><!-- /.menu-title -->
 
                              <li>
-                                <a href="widgets.html"> <i class="menu-icon ti-github"></i>Resident Details </a>
+                                <a href="resident_admin.php"> <i class="menu-icon ti-github"></i>Resident Details </a>
                             </li>
                             <li>
                                 <a href="database_admin.php"> <i class="menu-icon ti-face-smile"></i>House Details </a>
