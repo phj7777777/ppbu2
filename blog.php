@@ -1,3 +1,9 @@
+<?php 
+include("php/database.php");
+include("article.php");
+include("ArticleController.php");
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,9 +133,6 @@
 	
 	</aside>
 
-
-	
-
 	<!-- Content page -->
 	<section>
 		<div class="bread-crumb bo5-b p-t-140 p-b-17">
@@ -150,280 +153,60 @@
 			<div class="row">
 				<div class="col-md-8 col-lg-9">
 					<div class="p-t-80 p-b-124 bo5-r h-full p-r-50 p-r-0-md bo-none-md">
-						<!-- Block4 -->
-						<div class="blo4 p-b-63">
-							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-								<a href="blog-detail.html">
-									<img src="images/blog-05.jpg" alt="IMG-BLOG">
-								</a>
+						
+					<?php //display articles
 
-								<div class="date-blo4 flex-col-c-m">
-									<span class="txt30 m-b-4">
-										28
-									</span>
+					$con->query('Select * From article');
+					$ArticleController = new ArticleController($con);
+					$articles = $ArticleController->getArticles();
 
-									<span class="txt31">
-										Dec, 2018
-									</span>
-								</div>
-							</div>
-
-							<div class="text-blo4 p-t-33">
-								<h4 class="p-b-16">
-									<a href="blog-detail.html" class="tit9">Cooking recipe Delicious</a>
-								</h4>
-
-								<div class="txt32 flex-w p-b-24">
-									<span>
-										by Admin
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										28 December, 2018
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										Cooking, Food
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										8 Comments
-									</span>
-								</div>
-
-								<p>
-									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius
-								</p>
-
-								<a href="blog-detail.html" class="dis-block txt4 m-t-30">
-									Continue Reading
-									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-								</a>
-							</div>
-						</div>
-
-						<!-- Block4 -->
-						<div class="blo4 p-b-63">
-							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-								<a href="blog-detail.html">
+					foreach($articles as $article){
+						
+						$date = DateTime::createFromFormat('Y-m-d H:i:s', $article->Date);
+						
+						echo '
+							<div class="blo4 p-b-63">
+								<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
+									<a href="blog-detail.html">
 									<img src="images/blog-06.jpg" alt="IMG-BLOG">
 								</a>
 
-								<div class="date-blo4 flex-col-c-m">
-									<span class="txt30 m-b-4">
-										20
-									</span>
+									<div class="date-blo4 flex-col-c-m">
+										<span class="txt30 m-b-4">
+											'.$date->format("d").'
+										</span>
 
-									<span class="txt31">
-										Dec, 2018
-									</span>
-								</div>
-							</div>
-
-							<div class="text-blo4 p-t-33">
-								<h4 class="p-b-16">
-									<a href="blog-detail.html" class="tit9">Pizza is prepared fresh</a>
-								</h4>
-
-								<div class="txt32 flex-w p-b-24">
-									<span>
-										by Admin
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										20 December, 2018
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										Cooking, Food
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										8 Comments
-									</span>
+										<span class="txt31">
+											'.$date->format("M, Y").'
+										</span>
+									</div>
 								</div>
 
-								<p>
-									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius
-								</p>
+								<div class="text-blo4 p-t-33">
+									<h4 class="p-b-16">
+										<a href="blog-detail.html" class="tit9">'.$article->Title.'</a>
+									</h4>
 
-								<a href="blog-detail.html" class="dis-block txt4 m-t-30">
-									Continue Reading
-									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-								</a>
-							</div>
-						</div>
+									<div class="txt32 flex-w p-b-24">
+										<span>
+											'.$date->format("d F, Y").'
+										</span>
+									</div>
 
-						<!-- Block4 -->
-						<div class="blo4 p-b-63">
-							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-								<a href="blog-detail.html">
-									<img src="images/blog-04.jpg" alt="IMG-BLOG">
-								</a>
-
-								<div class="date-blo4 flex-col-c-m">
-									<span class="txt30 m-b-4">
-										16
-									</span>
-
-									<span class="txt31">
-										Dec, 2018
-									</span>
+									<p>
+										'.$article->Content.'
+									</p>
+									
+									<!-- href to content -->
+									<a href="blog-detail.html" class="dis-block txt4 m-t-30">
+										Continue Reading
+										<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+									</a>
 								</div>
 							</div>
-
-							<div class="text-blo4 p-t-33">
-								<h4 class="p-b-16">
-									<a href="blog-detail.html" class="tit9">Style the Wedding Party</a>
-								</h4>
-
-								<div class="txt32 flex-w p-b-24">
-									<span>
-										by Admin
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										16 December, 2018
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										Cooking, Food
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										8 Comments
-									</span>
-								</div>
-
-								<p>
-									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius
-								</p>
-
-								<a href="blog-detail.html" class="dis-block txt4 m-t-30">
-									Continue Reading
-									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-								</a>
-							</div>
-						</div>
-
-						<!-- Block4 -->
-						<div class="blo4 p-b-63">
-							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-								<a href="blog-detail.html">
-									<img src="images/blog-07.jpg" alt="IMG-BLOG">
-								</a>
-
-								<div class="date-blo4 flex-col-c-m">
-									<span class="txt30 m-b-4">
-										15
-									</span>
-
-									<span class="txt31">
-										Dec, 2018
-									</span>
-								</div>
-							</div>
-
-							<div class="text-blo4 p-t-33">
-								<h4 class="p-b-16">
-									<a href="blog-detail.html" class="tit9">Best Places for Wine</a>
-								</h4>
-
-								<div class="txt32 flex-w p-b-24">
-									<span>
-										by Admin
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										15 December, 2018
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										Cooking, Food
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										8 Comments
-									</span>
-								</div>
-
-								<p>
-									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius
-								</p>
-
-								<a href="blog-detail.html" class="dis-block txt4 m-t-30">
-									Continue Reading
-									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-								</a>
-							</div>
-						</div>
-
-						<!-- Block4 -->
-						<div class="blo4 p-b-63">
-							<div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-								<a href="blog-detail.html">
-									<img src="images/blog-10.jpg" alt="IMG-BLOG">
-								</a>
-
-								<div class="date-blo4 flex-col-c-m">
-									<span class="txt30 m-b-4">
-										12
-									</span>
-
-									<span class="txt31">
-										Dec, 2018
-									</span>
-								</div>
-							</div>
-
-							<div class="text-blo4 p-t-33">
-								<h4 class="p-b-16">
-									<a href="blog-detail.html" class="tit9">Best Places for Wine</a>
-								</h4>
-
-								<div class="txt32 flex-w p-b-24">
-									<span>
-										by Admin
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										12 December, 2018
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										Cooking, Food
-										<span class="m-r-6 m-l-4">|</span>
-									</span>
-
-									<span>
-										8 Comments
-									</span>
-								</div>
-
-								<p>
-									Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius
-								</p>
-
-								<a href="blog-detail.html" class="dis-block txt4 m-t-30">
-									Continue Reading
-									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-								</a>
-							</div>
-						</div>
+						';
+					}
+					?>
 
 						<!-- Pagination -->
 						<div class="pagination flex-l-m flex-w m-l--6 p-t-25">
@@ -486,8 +269,6 @@
 		</div>
 	</section>
 
-
-
 	<footer>
 		<div class="end-footer bg2">
 			<div class="container">
@@ -504,7 +285,6 @@
 			</div>
 		</div>
 	</footer>
-
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
