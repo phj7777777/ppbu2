@@ -52,12 +52,6 @@
 							<ul class="main_menu">
 								
 
-
-                                <li><a href="reservation.php">Events</a>
-                                   
-                                </li>
-
-
 								<li>
 									<a href="about.php">About Us</a>
 								</li>

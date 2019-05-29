@@ -26,7 +26,7 @@ $queryResult = mysqli_num_rows($admin_result);
 if($queryResult > 0){
     $_SESSION['admin_name'] = $row['username'];
     $_SESSION['admin_email'] = $row['admin_email'];
-    header("Location:index.php" );
+    header("Location:adminPanel/index.php" );
     exit();
     
 }

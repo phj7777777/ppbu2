@@ -176,15 +176,15 @@
                             <div class="col-12 col-md-9">
                                 <select name="road" id="select" class="form-control">
                                     <option value="0">Please Select</option>
-                                    <option value="1">BU2/1</option>
-                                    <option value="2">BU2/2</option>
-                                    <option value="3">BU2/3</option>
-                                     <option value="4">BU2/4</option>
-                                    <option value="5">BU2/5</option>
-                                    <option value="6">BU2/6</option>
-                                     <option value="7">BU2/7</option>
-                                    <option value="8">BU2/8</option>
-                                    <option value="9">BU2/9</option>
+                                    <option value="BU2/1">BU2/1</option>
+                                    <option value="BU2/2">BU2/2</option>
+                                    <option value="BU2/3">BU2/3</option>
+                                     <option value="BU2/4">BU2/4</option>
+                                    <option value="BU2/5">BU2/5</option>
+                                    <option value="BU2/6">BU2/6</option>
+                                     <option value="BU2/7">BU2/7</option>
+                                    <option value="BU2/8">BU2/8</option>
+                                    <option value="BU2/9">BU2/9</option>
                                 </select>
                             </div>
                         </div>
@@ -246,17 +246,17 @@
                                 <div class="form-check">
                                     <div class="radio">
                                         <label for="radio1" class="form-check-label ">
-                                            <input type="radio" id="radio1" name="payment_method" onclick="myFunction()" value="option1" class="form-check-input">Cheque
+                                            <input type="radio" id="radio1" name="payment_method" onclick="myFunction()" value="Cheque" class="form-check-input">Cheque
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label for="radio2" class="form-check-label ">
-                                            <input type="radio" id="radio2" name="payment_method" value="option2" onclick="myFunction()" class="form-check-input">Online Banking
+                                            <input type="radio" id="radio2" name="payment_method" value="Online Banking" onclick="myFunction()" class="form-check-input">Online Banking
                                         </label>
                                     </div>
                                     <div class="radio">
                                         <label for="radio3" class="form-check-label ">
-                                            <input type="radio" id="radio3" name="payment_method" onclick="myFunction()" value="option3" class="form-check-input">Mytaman App
+                                            <input type="radio" id="radio3" name="payment_method" onclick="myFunction()" value="Mytaman App" class="form-check-input">Mytaman App
                                         </label>
                               </div>
                                 </div>   
@@ -269,30 +269,30 @@
                             <div class="col col-md-3"><label for="select" class=" form-control-label">Bank</label></div>
                             <div class="col-12 col-md-9">
                                 <select name="bank" id="select" class="form-control">
-                                    <option value="0">Affin Bank</option>
-                                    <option value="1">Alliance Bank Malaysia</option>
-                                    <option value="2">AmBank (M)</option>
-                                    <option value="3">BNP Paribas Malaysia</option>
-                                     <option value="4">Bangkok Bank</option>
-                                    <option value="5">Bank of America Malaysia</option>
-                                    <option value="6">Bank of China (Malaysia)</option>
-                                     <option value="7">CIMB Bank</option>
-                                    <option value="8">China Construction Bank (Malaysia)</option>
-                                    <option value="9">Citibank</option>
-                                     <option value="0">Deutsche Bank (Malaysia)</option>
-                                    <option value="1">Industrial and Commercial Bank of China (Malaysia)</option>
-                                    <option value="2">Hong Leong Bank</option>
-                                    <option value="3">India International Bank (Malaysia)</option>
-                                     <option value="4">J.P. Morgan Chase Bank</option>
-                                    <option value="5">MUFG Bank (Malaysia)</option>
-                                    <option value="6">Malayan Banking</option>
-                                     <option value="7">OCBC Bank (Malaysia)</option>
-                                    <option value="8">Public Bank</option>
-                                    <option value="9">RHB Bank</option>
-                                     <option value="6">Standard Chartered Bank Malaysia</option>
-                                     <option value="7">Sumitomo Mitsui Banking Corporation Malaysia</option>
-                                    <option value="8">The Bank of Nova Scotia</option>
-                                    <option value="9">United Overseas Bank (Malaysia)</option>
+                                    <option value="Affin Bank">Affin Bank</option>
+                                    <option value="Alliance Bank">Alliance Bank Malaysia</option>
+                                    <option value="AmBank (M)">AmBank (M)</option>
+                                    <option value="BNP Paribas Malaysia">BNP Paribas Malaysia</option>
+                                     <option value="Bangkok Bank">Bangkok Bank</option>
+                                    <option value="Bank of America Malaysia">Bank of America Malaysia</option>
+                                    <option value="Bank of China (Malaysia)">Bank of China (Malaysia)</option>
+                                     <option value="CIMB Bank">CIMB Bank</option>
+                                    <option value="China Construction Bank (Malaysia)">China Construction Bank (Malaysia)</option>
+                                    <option value="Citibank">Citibank</option>
+                                     <option value="Deutsche Bank (Malaysia)">Deutsche Bank (Malaysia)</option>
+                                    <option value="Industrial and Commercial Bank of China (Malaysia)">Industrial and Commercial Bank of China (Malaysia)</option>
+                                    <option value="Hong Leong Bank">Hong Leong Bank</option>
+                                    <option value="India International Bank (Malaysia)">India International Bank (Malaysia)</option>
+                                     <option value="J.P. Morgan Chase Bank">J.P. Morgan Chase Bank</option>
+                                    <option value="MUFG Bank (Malaysia)">MUFG Bank (Malaysia)</option>
+                                    <option value="Malayan Banking">Malayan Banking</option>
+                                     <option value="OCBC Bank (Malaysia)">OCBC Bank (Malaysia)</option>
+                                    <option value="Public Bank">Public Bank</option>
+                                    <option value="RHB Bank">RHB Bank</option>
+                                     <option value="Standard Chartered Bank Malaysia">Standard Chartered Bank Malaysia</option>
+                                     <option value="Sumitomo Mitsui Banking Corporation Malaysia">Sumitomo Mitsui Banking Corporation Malaysia</option>
+                                    <option value="he Bank of Nova Scotia">The Bank of Nova Scotia</option>
+                                    <option value="United Overseas Bank (Malaysia)">United Overseas Bank (Malaysia)</option>
                                 </select>
                             </div>
                         </div>

@@ -13,8 +13,9 @@ if(isset($_POST["crud_action"]))
   $query = '';
   
   $output = array();
+     
+  $order_column = array('houseNo','road','car_sticker','gate_key','donation','payment_method');
 
-  $order_column = array('houseNo','road');
 
   $query .= "
    SELECT * FROM payment 

@@ -13,11 +13,12 @@ if(isset($_POST["crud_action"]))
   $query = '';
   
   $output = array();
+     
+  $order_column = array('name','icNo','houseNo','road','sex','typeofresidences','phoneNo','email');
 
-   $order_column = array('houseNo','road');
 
   $query .= "
-   SELECT * FROM payment 
+   SELECT * FROM resident 
   ";
 
      
@@ -26,7 +27,13 @@ if(isset($_POST["crud_action"]))
   {
 
    $query .= 'WHERE houseNo LIKE "%'.$_POST["search"]["value"].'%" ';
+   $query .= 'OR icNo LIKE "%'.$_POST["search"]["value"].'%" ';
    $query .= 'OR road LIKE "%'.$_POST["search"]["value"].'%" ';
+   $query .= 'OR name LIKE "%'.$_POST["search"]["value"].'%" ';
+   $query .= 'OR sex LIKE "%'.$_POST["search"]["value"].'%" ';
+   $query .= 'OR typeofresidences LIKE "%'.$_POST["search"]["value"].'%" ';
+   $query .= 'OR phoneNo LIKE "%'.$_POST["search"]["value"].'%" ';
+   $query .= 'OR email LIKE "%'.$_POST["search"]["value"].'%" ';
   
   }
 
@@ -56,12 +63,16 @@ if(isset($_POST["crud_action"]))
 
   foreach($result as $row)
   {
-      
-     $sub_array = array(); //initial
+         
+   $sub_array = array(); //initial
+   $sub_array[] = $row['name'];
+    $sub_array[] = $row['icNo'];
    $sub_array[] = $row['houseNo'];
    $sub_array[] = $row['road'];
-   $sub_array[] = '<button type="button" name="view" id="'.$row["id"].'" class="btn btn-success btn-xs view">View</button>';
-
+   $sub_array[] = $row['sex'];
+   $sub_array[] = $row['typeofresidences'];
+   $sub_array[] = $row['phoneNo'];
+   $sub_array[] = $row['email'];
    $output[] = $sub_array;
   }
 
@@ -78,7 +89,7 @@ if(isset($_POST["crud_action"]))
   $message = '';
 
     $query = '
-   SELECT * FROM payment where id= $_POST["id"]
+   SELECT * FROM resident where id= $_POST["id"]
   ';
 
    $statement = $connect->prepare($query);

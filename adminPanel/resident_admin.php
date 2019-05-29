@@ -123,7 +123,7 @@
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
 
-                        <h3>Database Panel</h3>
+                        <h3>Resident Panel</h3>
                        
 
                     </div>
@@ -160,7 +160,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active">Dashboard</li>
+                            <li class="active">Dashboard/ Resident Details</li>
                         </ol>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
          <div class="panel-heading">
           <div class="col-lg-10 col-md-10 col-sm-8 col-xs-6">
            <div class="row">
-            <h3 class="panel-title">Database List</h3>
+            <h3 class="panel-title">Resident List</h3>
            </div>
           </div>
           
@@ -189,12 +189,14 @@
             <table id="user_data" class="table table-bordered table-striped"> 
              <thead><tr>
 
+              <th>Name</th>
+              <th>IcNo</th>
               <th>HouseNo</th>
               <th>Street</th>
-              <th>Car Sticker</th>
-              <th>Gate Key</th>
-              <th>Donation</th>
-              <th>Payment Method</th>
+              <th>Sex</th>
+              <th>Type</th>
+              <th>Phone No</th>
+              <th>Email</th>
              </tr></thead>
             </table>
            </div>
@@ -202,127 +204,7 @@
          </div>
         </div>
        </div>
-      </div></div>
-
-      <div style="margin:15px">  
-
-            <form mehtod="post" id="export_excel">  
-                 <label>Select Excel File to import</label>  
-                 <input type="file" name="excel_file" id="excel_file" />  
-            </form>  
-            <br />  
-            <br />  
-            <div id="result">  
-            </div>  
-       </div>     
-
-
-
-      <div id="userModal" class="modal fade">
-       <div class="modal-dialog">
-        <form method="post" id="user_form">
-         <div class="modal-content">
-          <div class="modal-header">
-           <button type="button" class="close" data-dismiss="modal">&times;</button>
-           <h4 class="modal-title">User Information</h4>
-          </div>
-          <div class="modal-body">
-           <span id="validation_error"></span>
-           <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" name="full_name" id="full_name" class="modal-view form-control" />
-           </div>
-           <div class="form-group">
-            <label>NRIC</label>
-            <input type="text" name="nric" id="nric" placeholder="eg: XXXXXX-XX-XXXX" pattern="^\d{6}-\d{2}-\d{4}$" class="form-control" />
-           </div>
-           <div class="form-group">
-            <label>Gender</label>
-            <label class="radio-inline">
-              <input type="radio" name="gender" class="gender" value="male" checked >Male
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="gender" class="gender" value="female" >Female
-            </label>
-           </div>
-           <div class="form-group">
-            <label>Member Since </label>
-           <input  type="date" name="memberSince" id="memberSince" class="form-control" required />
-           </div>
-               <div class="form-group">
-            <label>House No </label>
-           <input  type="text" name="houseNo" id="houseNo" placeholder="eg: 88" class="form-control"required />
-           </div>
-               <div class="form-group">
-            <label>Road Address </label>
-             <input  type="text" name="roadAddress" id="roadAddress" placeholder="eg: Jalan BU4/1" class="form-control" required />
-           </div>
-                <div class="form-group">
-            <label>Phone No 1 </label>
-             <input  type="tel" name="phoneNum1" id="phoneNum1" placeholder="eg: +601X-XXXXXXX" pattern="(\+?6?01)[0-46-9]-*[0-9]{7,8}" class="form-control" required />
-           </div>
-               <div class="form-group">
-            <label>Phone No 2 </label>
-             <input  type="tel" name="phoneNum2" id="phoneNum2" placeholder="eg: +601X-XXXXXXX" pattern="(\+?6?01)[0-46-9]-*[0-9]{7,8}" class="form-control" required />
-           </div>
-                <div class="form-group">
-            <label>Email 1 </label>
-             <input  type="email" name="email1" id="email1" placeholder="eg: vincent@mail.com" class="form-control"   />
-           </div>
-              <div class="form-group">
-            <label>Email 2 </label>
-             <input  type="email" name="email2" id="email2" placeholder="eg: vincent@mail.com" class="form-control" />
-           </div>
-               <div class="form-group">
-            <label>Resident Type:</label>
-              <select name="residentType" id="residentType">
-                    <option value="Owner">Owner</option>
-                    <option value="Renter">Renter</option>
-            </select>      
-           </div>
-               <div class="form-group">
-            <label>Street Representive: </label>
-              <input  type="checkbox"  id="Is_Committee" name="Is_Committee" value=1> Yes<br>
-           </div>
-
-               <div class="form-group">
-           <label for="receiptNo">Reciept No:</label>
-              <input  id="receiptNo" type="text" name="receiptNo" placeholder="N1234" class="form-control"  required />
-           </div>
-               <div class="form-group">
-            <label for="receiptDate">Receipt Date:</label>
-                <input id="receiptDate" type="date" name="receiptDate" class="form-control" required />
-           </div>
-               <div class="form-group">
-            <label for="collectionDate">Collection Date:</label>
-              <input  id="collectionDate" type="date" name="collectionDate"  required class="form-control"  />
-           </div>
-               <div class="form-group">
-             <label for="mode">Mode Of Payment:</label>
-              <select id="mode" name="mode" class="form-control" >
-                <option value="Cash">Cash</option>
-                <option value="Cek">Cek</option>
-                <option value="IBG">IBG</option>
-                <option value="Visa">Visa</option>
-
-            </select>      
-           </div>
-               <div class="form-group">
-            <label for="amountReceived">Amount Received:</label>
-              <input id="amountReceived" type="number" name="amountReceived" min=0 class="form-control" required> 
-           </div>
-
-          </div>
-          <div class="modal-footer">
-           <input type="hidden" name="id" id="id"/>
-           <input type="hidden" name="crud_action" id="crud_action"/>
-           <input type="submit" name="action" id="action" class="btn btn-info" value="Add" />
-           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-         </div>
-        </form>
-       </div>
-
+      </div>
 
 
         </div> <!-- .content -->
@@ -348,33 +230,7 @@
     
     <script>
 $(document).ready(function(){
- $('#add_button').click(function(){
-  $('#userModal').modal('show');
-  $('#user_form')[0].reset();
-  $('.modal-title').html("<i class='fa fa-plus'></i> Add User");
-  $('#action').val('Add');
-  $('#crud_action').val('Add');
-     
-      
- });
- 
-  $('#excel_file').change(function(){  
-           $('#export_excel').submit();  
-      });  
-      $('#export_excel').on('submit', function(event){  
-           event.preventDefault();  
-           $.ajax({  
-                url:"export.php",  
-                method:"POST",  
-                data:new FormData(this),  
-                contentType:false,  
-                processData:false,  
-                success:function(data){  
-                     $('#result').html(data);  
-                     $('#excel_file').val('');  
-                }  
-           });  
-      });    
+
     
  var crud_action = 'fetch_all';
  
@@ -383,7 +239,7 @@ $(document).ready(function(){
       "serverSide":true,
       "order":[],
       "ajax":{
-       url:"payment_action.php",
+       url:"resident_action.php",
        type:"POST",
        data:{crud_action:crud_action},
       },

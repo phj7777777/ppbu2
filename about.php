@@ -57,10 +57,6 @@
 								</li>
 
 								<li>
-									<a href="reservation.html">Events</a>
-								</li>
-
-								<li>
 									<a href="blog.php">News</a>
 								</li>
 
