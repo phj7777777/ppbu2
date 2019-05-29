@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>PPBU2 database panel</title>
+  <title>PPBU2 admin panel</title>
     <meta name="description" content="PPBU2 admin panel">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,12 +18,7 @@
     <link rel="shortcut icon" href="../images/icons/favicon.png">
 
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
@@ -64,7 +59,7 @@
                             <a href="create_new_member.php"> <i class="menu-icon ti-github"></i>New Member </a>
                         </li>
                         <li>
-                            <a href="widgets.html"> <i class="menu-icon ti-face-smile"></i>New Resident </a>
+                            <a href="create_new_resident.php"> <i class="menu-icon ti-face-smile"></i>New Resident </a>
                         </li>
                         <li>
                             <a href="create_payment.php"> <i class="menu-icon ti-wallet"></i>New Payment </a>
@@ -76,7 +71,7 @@
                     <h3 class="menu-title">View</h3><!-- /.menu-title -->
 
                              <li>
-                                <a href="widgets.html"> <i class="menu-icon ti-github"></i>Resident Details </a>
+                                <a href="resident_admin.php"> <i class="menu-icon ti-github"></i>Resident Details </a>
                             </li>
                             <li>
                                 <a href="database_admin.php"> <i class="menu-icon ti-face-smile"></i>House Details </a>
@@ -123,7 +118,7 @@
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
 
-                        <h3>Resident Panel</h3>
+                        <h3>Visitor Panel</h3>
                        
 
                     </div>
@@ -160,51 +155,29 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active">Dashboard/ Resident Details</li>
+                            <li class="active">Dashboard</li>
+                             <li>Visitors Details</li>
                         </ol>
                     </div>
                 </div>
             </div>
         </div>
 
-    
-  <div style="margin:15px">
+        <div class="content mt-3">
 
-      <div class="row">
-       <div class="col-lg-12">
-        <div class="panel panel-default">
-         <div class="panel-heading">
-          <div class="col-lg-10 col-md-10 col-sm-8 col-xs-6">
-           <div class="row">
-            <h3 class="panel-title">Resident List</h3>
-           </div>
-          </div>
+            <div class="col-sm-12">
+                <div class="alert  alert-success alert-dismissible fade show" role="alert">
+                    <span class="badge badge-pill badge-success">Maintainance</span> This page is still under maintainance.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+
+
+
+
           
-          <div style="clear:both"></div>
-         </div>
-         <div class="panel-body">
-          <div class="row">
-           <div class="col-sm-12 table-responsive">
-            <span id="alert_action"></span>
-            <table id="user_data" class="table table-bordered table-striped"> 
-             <thead><tr>
-
-              <th>Name</th>
-              <th>IcNo</th>
-              <th>HouseNo</th>
-              <th>Street</th>
-              <th>Sex</th>
-              <th>Type</th>
-              <th>Phone No</th>
-              <th>Email</th>
-             </tr></thead>
-            </table>
-           </div>
-          </div>
-         </div>
-        </div>
-       </div>
-      </div>
 
 
         </div> <!-- .content -->
@@ -222,38 +195,27 @@
     <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/widgets.js"></script>
     <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
- 
+    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script>
+        (function($) {
+            "use strict";
+
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+
 </body>
 
 </html>
-    
-    
-    <script>
-$(document).ready(function(){
-
-    
- var crud_action = 'fetch_all';
- 
- var userdataTable = $('#user_data').DataTable({
-      "processing":true,
-      "serverSide":true,
-      "order":[],
-      "ajax":{
-       url:"resident_action.php",
-       type:"POST",
-       data:{crud_action:crud_action},
-      },
-      "columnDefs":[
-       {
-        "targets":[4,5],
-        "orderable":true,
-       },
-      ],
-      "pageLength": 10
- });
- 
-    
-    
-    
-});
-</script>

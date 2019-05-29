@@ -203,18 +203,6 @@
        </div>
       </div></div>
 
-      <div style="margin:15px">  
-
-            <form mehtod="post" id="export_excel">  
-                 <label>Select Excel File to import</label>  
-                 <input type="file" name="excel_file" id="excel_file" />  
-            </form>  
-            <br />  
-            <br />  
-            <div id="result">  
-            </div>  
-       </div>     
-
 
 
       <div id="userModal" class="modal fade">
@@ -223,93 +211,17 @@
          <div class="modal-content">
           <div class="modal-header">
            <button type="button" class="close" data-dismiss="modal">&times;</button>
-           <h4 class="modal-title">User Information</h4>
+           <h4 class="modal-title">House Information</h4>
           </div>
           <div class="modal-body">
            <span id="validation_error"></span>
-           <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" name="full_name" id="full_name" class="modal-view form-control" />
-           </div>
-           <div class="form-group">
-            <label>NRIC</label>
-            <input type="text" name="nric" id="nric" placeholder="eg: XXXXXX-XX-XXXX" pattern="^\d{6}-\d{2}-\d{4}$" class="form-control" />
-           </div>
-           <div class="form-group">
-            <label>Gender</label>
-            <label class="radio-inline">
-              <input type="radio" name="gender" class="gender" value="male" checked >Male
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="gender" class="gender" value="female" >Female
-            </label>
-           </div>
-           <div class="form-group">
-            <label>Member Since </label>
-           <input  type="date" name="memberSince" id="memberSince" class="form-control" required />
-           </div>
-               <div class="form-group">
-            <label>House No </label>
-           <input  type="text" name="houseNo" id="houseNo" placeholder="eg: 88" class="form-control"required />
-           </div>
-               <div class="form-group">
-            <label>Road Address </label>
-             <input  type="text" name="roadAddress" id="roadAddress" placeholder="eg: Jalan BU4/1" class="form-control" required />
-           </div>
-                <div class="form-group">
-            <label>Phone No 1 </label>
-             <input  type="tel" name="phoneNum1" id="phoneNum1" placeholder="eg: +601X-XXXXXXX" pattern="(\+?6?01)[0-46-9]-*[0-9]{7,8}" class="form-control" required />
-           </div>
-               <div class="form-group">
-            <label>Phone No 2 </label>
-             <input  type="tel" name="phoneNum2" id="phoneNum2" placeholder="eg: +601X-XXXXXXX" pattern="(\+?6?01)[0-46-9]-*[0-9]{7,8}" class="form-control" required />
-           </div>
-                <div class="form-group">
-            <label>Email 1 </label>
-             <input  type="email" name="email1" id="email1" placeholder="eg: vincent@mail.com" class="form-control"   />
-           </div>
-              <div class="form-group">
-            <label>Email 2 </label>
-             <input  type="email" name="email2" id="email2" placeholder="eg: vincent@mail.com" class="form-control" />
-           </div>
-               <div class="form-group">
-            <label>Resident Type:</label>
-              <select name="residentType" id="residentType">
-                    <option value="Owner">Owner</option>
-                    <option value="Renter">Renter</option>
-            </select>      
-           </div>
-               <div class="form-group">
-            <label>Street Representive: </label>
-              <input  type="checkbox"  id="Is_Committee" name="Is_Committee" value=1> Yes<br>
-           </div>
+              <h5>Resident/ Member</h5>
+              <hr>
 
-               <div class="form-group">
-           <label for="receiptNo">Reciept No:</label>
-              <input  id="receiptNo" type="text" name="receiptNo" placeholder="N1234" class="form-control"  required />
-           </div>
-               <div class="form-group">
-            <label for="receiptDate">Receipt Date:</label>
-                <input id="receiptDate" type="date" name="receiptDate" class="form-control" required />
-           </div>
-               <div class="form-group">
-            <label for="collectionDate">Collection Date:</label>
-              <input  id="collectionDate" type="date" name="collectionDate"  required class="form-control"  />
-           </div>
-               <div class="form-group">
-             <label for="mode">Mode Of Payment:</label>
-              <select id="mode" name="mode" class="form-control" >
-                <option value="Cash">Cash</option>
-                <option value="Cek">Cek</option>
-                <option value="IBG">IBG</option>
-                <option value="Visa">Visa</option>
+                 <hr>
+              <h5>Payment Details</h5>
+              <hr>
 
-            </select>      
-           </div>
-               <div class="form-group">
-            <label for="amountReceived">Amount Received:</label>
-              <input id="amountReceived" type="number" name="amountReceived" min=0 class="form-control" required> 
-           </div>
 
           </div>
           <div class="modal-footer">

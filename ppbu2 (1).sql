@@ -76,29 +76,11 @@ CREATE TABLE IF NOT EXISTS `resident` (
   `id` int(10) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
-
-CREATE TABLE IF NOT EXISTS `member` (
-  `name` varchar(80) NOT NULL,
-  `icNo` varchar(20) NOT NULL,
-  `houseNo` varchar(10) NOT NULL,
-  `road` varchar(10) NOT NULL,
-  `sex` varchar(10) NOT NULL,
-  `typeofresidences` varchar(30) NOT NULL,
-  `phoneNo` varchar(60) NOT NULL,
-  `email` varchar(60) NOT NULL,
-  `id` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
-
-
 --
 -- Dumping data for table `resident`
 --
 
 INSERT INTO `resident` (`name`, `icNo`, `houseNo`, `road`, `sex`, `typeofresidences`, `phoneNo`, `email`, `id`) VALUES
-('James', '981020-01-1234', '70', '4', 'female', 'TENANT-OCCUPIED HOUSE', '122222222', 'haojie02074@gmail.com', 4);
-
-
-INSERT INTO `member` (`name`, `icNo`, `houseNo`, `road`, `sex`, `typeofresidences`, `phoneNo`, `email`, `id`) VALUES
 ('James', '981020-01-1234', '70', '4', 'female', 'TENANT-OCCUPIED HOUSE', '122222222', 'haojie02074@gmail.com', 4);
 
 --
@@ -131,19 +113,6 @@ ALTER TABLE `resident`
 -- AUTO_INCREMENT for table `resident`
 --
 ALTER TABLE `resident`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
-  
-  ALTER TABLE `member`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `resident`
---
-ALTER TABLE `member`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
