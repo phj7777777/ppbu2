@@ -89,6 +89,74 @@ CREATE TABLE IF NOT EXISTS `member` (
   `id` int(10) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `article`
+--
+
+CREATE TABLE `article` (
+  `Id` int(99) NOT NULL,
+  `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Title` varchar(50) NOT NULL,
+  `Image` blob,
+  `Content` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `article`
+--
+
+INSERT INTO `article` (`Id`, `Date`, `Title`, `Image`, `Content`) VALUES
+(1, '2019-05-21 02:07:02', 'Test', NULL, 'This is just a very long test sentence to check if data can be seen or read correctly using mysql and php together.'),
+(2, '2019-05-21 02:34:39', 'Test 2', NULL, 'This is just a very long test sentence to check if data can be seen or read correctly using mysql and php together.'),
+(3, '2019-06-01 16:45:17', 'Test 3', NULL, 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `phone`, `message`) VALUES
+(1, '1', '2', '3', '4'),
+(2, 'name', 'email', 'test', 'test');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hyperlink`
+--
+
+CREATE TABLE `hyperlink` (
+  `id` int(11) NOT NULL,
+  `link` text NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hyperlink`
+--
+
+INSERT INTO `hyperlink` (`id`, `link`, `description`) VALUES
+(1, 'www.google.com', 'Google'),
+(2, 'www.stackoverflow.com', 'StackOverflow'),
+(3, 'www.facebook.com', 'Facebook');
+
+-- --------------------------------------------------------
+
 
 --
 -- Dumping data for table `resident`
@@ -112,10 +180,22 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`username`);
 
 --
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `payment`
 --
 ALTER TABLE `payment`
   ADD PRIMARY KEY (`houseNo`,`road`);
+
+--
+-- Indexes for table `hyperlink`
+--
+ALTER TABLE `hyperlink`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `resident`
@@ -140,6 +220,16 @@ ALTER TABLE `resident`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `hyperlink`
+--
+ALTER TABLE `hyperlink`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `resident`
 --
