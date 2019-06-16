@@ -1,3 +1,6 @@
+<?php
+include('php/db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +103,7 @@
 
         <h3 class="t-center  p-t-95 m-b-13">About Us</h3>
 		<!-- - -->
-	<ul class="menu-sidebar p-t-55 p-b-70">
+		<ul class="menu-sidebar p-t-55 p-b-70">
 			<li class="t-center m-b-13">
 				<a href="about.php" class="txt19">Home</a>
 			</li>
@@ -146,8 +149,8 @@
       <thead>
         <tr>
           <th>No</th>
-          <th>Hyperlink</th>
           <th>Description</th>
+          <th>Hyperlink</th>
          
         </tr>
       </thead>
@@ -156,33 +159,24 @@
   <div class="tbl-content">
     <table cellpadding="0" cellspacing="0" border="0">
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Income Tax 2019</td>
-          <td><a href="google.com">Click here</a></td>
-         
-        </tr>
-          
-        <tr>
-          <td>2</td>
-          <td>Income Tax 2019</td>
-          <td><a href="google.com">Click here</a></td>
-         
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Income Tax 2019</td>
-          <td><a href="google.com">Click here</a></td>
-         
-        </tr>
-           <tr>
-          <td>4</td>
-          <td>Income Tax 2019</td>
-          <td><a href="google.com">Click here</a></td>
-         
-        </tr>
-       
-      
+		<?php
+		  
+		$result = mysqli_query($con, 'SELECT * FROM hyperlink');
+
+		while ($row = mysqli_fetch_assoc($result)){
+			echo '
+			<tr>
+				<td>'. $row['id'] .'</td>
+				<td>'. $row['description'] .'</td>
+				<td><a href="'. $row['link'] .'">'. $row['link'] .'</a></td>
+			</tr>';
+		}
+
+		
+		  
+		?>
+        
+		
       </tbody>
     </table>
   </div>

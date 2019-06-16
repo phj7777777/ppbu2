@@ -1,3 +1,20 @@
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+	include("php/db.php");
+
+	$result = mysqli_query($con, 'INSERT INTO contact (name, email, phone, message) VALUES ("'.$_POST['name'].'", "'.$_POST['email'].'", "'.$_POST['phone'].'", "'.$_POST['message'].'")');
+
+	echo $result;
+
+	return;
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +48,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -137,7 +156,7 @@
 				Send us a Message
 			</h3>
 
-			<form class="wrap-form-reservation size22 m-l-r-auto">
+			<form id="form" class="wrap-form-reservation size22 m-l-r-auto">
 				<div class="row">
 					<div class="col-md-4">
 						<!-- Name -->
@@ -183,7 +202,7 @@
 
 				<div class="wrap-btn-booking flex-c-m m-t-13">
 					<!-- Button3 -->
-					<button type="submit" class="btn3 flex-c-m size36 txt11 trans-0-4">
+					<button type="button" class="btn3 flex-c-m size36 txt11 trans-0-4" onclick="submitContact();">
 						Submit
 					</button>
 				</div>
@@ -313,4 +332,31 @@
 	<script src="js/main.js"></script>
 
 </body>
+<script>
+
+function submitContact() {
+	var data = $("#form").serialize();
+
+	//to-do check for invalid input
+
+	//submit contact message
+	$.ajax({
+        type: 'POST',
+        url: 'contact.php',
+        data: data,
+        success: function(res) { console.log(res);
+			if (res){
+				alert('true'); //to-do redirect to complete page
+			} else {
+				alert('false'); //to-do alert wrong answer and ask user to check form
+			}
+			
+        }
+    });
+
+
+	
+}
+
+</script>
 </html>
